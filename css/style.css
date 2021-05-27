@@ -1,0 +1,20 @@
+.container {
+    background: black;
+    color: white;
+}
+
+.hdr{
+    background: silver;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 200%;
+}
+
+#list{
+    text-align:center;
+}
+
+#error-response{
+    text-align:center;
+}
