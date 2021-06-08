@@ -24,7 +24,7 @@ const getUsersHandler = async (req, res) => {
         }
         if (response[0] === 200) {
             res.locals.list = userList;
-            res.render('people.html');
+            res.render('people.html', {heading: 'List of members living in or within 50 miles of London.'});
         } else {
             res.locals.error = response[0];
             res.render('error.html');
