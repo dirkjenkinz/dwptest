@@ -1,7 +1,8 @@
 const express=require('express');
 const app = express();
 const config = require('./config/config');
-const router = require('./routes/people');
+const peopleRouter = require('./routes/people');
+const usersRouter = require('./routes/users');
 const nunjucks = require('nunjucks');
 const PORT = config.port || 3000;
 
@@ -12,7 +13,8 @@ nunjucks.configure('pages', {
 
 app.use(express.static(__dirname + '/'));
 
-app.use('/people', router);
+app.use('/people', peopleRouter);
+app.use('/users', usersRouter);
 
 app.listen(PORT, (err)=> {
     console.log(`up & running on port ${PORT}`);
